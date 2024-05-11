@@ -1,6 +1,6 @@
 import boto3
 
-# Enter the region your instances are in. Include only the region without specifying Availability Zone; e.g., 'us-east-1'
+# Enter the region your instances are in.
 region = 'us-east-1'
 
 # Get the specific EC2 instance in a region.
@@ -13,7 +13,7 @@ instancelist = []
 response = ec2.describe_instances(
         Filters=[
             {
-                'Name':'tag:Scheduler',
+                'Name':'tag:Stop_At_7PM',
                 'Values': ['True']
 
             }])
